@@ -1,0 +1,15 @@
+<app-header />
+<div class="content-layout">
+  <app-navbar />
+  <main class="main-content">
+    <!-- This is where the routed component will be rendered -->
+    <router-outlet></router-outlet>
+    @defer(on viewport){<app-ad-banner />}@placeholder {
+    <div class="ads-placeholder">
+      <p>Loading advertisement...</p>
+    </div>
+    }
+  </main>
+</div>
+
+<app-footer />

@@ -1,0 +1,25 @@
+<section class="search-dialog">
+  <h2 mat-dialog-title>Search</h2>
+  <mat-dialog-content>
+    <form>
+      <label for="category">Category</label>
+      <select
+        name="category"
+        placeholder="Part Category"
+        (change)="filterByType($event)"
+      >
+        <option value="">All Types</option>
+        <option value="CPU">CPU</option>
+        <option value="GPU">GPU</option>
+        <option value="Motherboard">Motherboard</option>
+        <option value="RAM">RAM</option>
+        <option value="SSD">SSD</option>
+        <option value="Power Supply">Power Supply</option>
+      </select>
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-button (click)="goToResults()">GO</button>
+  </mat-dialog-actions>
+</section>

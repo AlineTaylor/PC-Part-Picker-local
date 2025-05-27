@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding: 2rem;
+  background-color: var(--secondary-color-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--secondary-color-dark);
+}
+
+/* responsive layout */
+@media (min-width: 1024px) {
+  :host {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

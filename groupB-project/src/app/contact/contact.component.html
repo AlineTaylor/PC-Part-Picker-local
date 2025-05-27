@@ -1,0 +1,207 @@
+<section>
+  <h1>Contact Us</h1>
+  <!-- Contact Form-->
+  <div class="contact-us-container">
+    <div class="section-header">
+      <h2>Send us a message!</h2>
+    </div>
+    <form
+      class="contact-form"
+      #contactForm="ngForm"
+      (ngSubmit)="onSubmit(contactForm)"
+    >
+      <div class="label-row">
+        <label for="name">Name:</label>
+        @if (contactForm.submitted && contactForm.controls['name'].invalid){
+        <span><small class="error">*required</small></span>
+        }
+      </div>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="What is your name?"
+        [(ngModel)]="name"
+      />
+      <div class="label-row">
+        <label for="email">Email:</label>
+        @if (contactForm.submitted && contactForm.controls['email'].invalid){
+        <span><small class="error">*required</small></span>
+        }
+      </div>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="How can we reach you?"
+        [(ngModel)]="email"
+      />
+      <div class="label-row">
+        <label for="subject">Subject:</label>
+        @if (contactForm.submitted && contactForm.controls['subject'].invalid){
+        <span><small class="error">*required</small></span>
+        }
+      </div>
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        required
+        [(ngModel)]="subject"
+      />
+      <div class="label-row">
+        <label for="message">Message:</label>
+        @if (contactForm.submitted && contactForm.controls['message'].invalid){
+        <span><small class="error">*required</small></span>
+        }
+      </div>
+      <textarea
+        id="message"
+        name="message"
+        required
+        [(ngModel)]="message"
+      ></textarea>
+
+      <button type="submit" title="Send">Send</button>
+    </form>
+  </div>
+  <!-- Meet the team section-->
+  <div class="meet-the-team-container">
+    <div class="section-header">
+      <h2>Meet the team</h2>
+    </div>
+    <ul class="team-list">
+      <li class="team-member-card">
+        <div class="social-buttons">
+          <button
+            class="social-media-button"
+            title="Connect with Aline on LinkedIn"
+            matToolTip="Connect with Aline on LinkedIn"
+          >
+            <a href="https://www.linkedin.com/in/aline-taylor/" target="_blank"
+              ><img src="/assets/linkedin-logo.png" height="40rem"
+            /></a>
+          </button>
+          <button
+            class="social-media-button"
+            title="See Aline's work on GitHub"
+            matToolTip="See Aline's work on GitHub"
+          >
+            <a href="https://github.com/AlineTaylor" target="_blank"
+              ><img src="/assets/github-logo.png" height="40rem"
+            /></a>
+          </button>
+        </div>
+        <img
+          title="Aline Taylor"
+          matTooltip="Aline Taylor"
+          class="profile-picture"
+          src="/assets/aline.png"
+          alt="Aline Taylor"
+          height="50px"
+        />
+
+        <div class="team-member-info">
+          <h3 class="profile-name">Aline Taylor</h3>
+          <h4 class="profile-occupation">Junior Front-End Developer</h4>
+          <p class="profile-description">
+            Front-end developer in training, passionate about creating clean,
+            intuitive digital experiences. I thrive at the intersection of
+            creativity and code, with hands-on experience in building
+            component-driven applications using Angular. 💻 With a background in
+            project coordination, data analysis, and technical writing, I have a
+            knack for turning complex ideas into polished, user-centered
+            interfaces. Currently expanding my full-stack skills, always with
+            the end user in mind — because the best code is the kind that just
+            feels right. ✨
+          </p>
+        </div>
+      </li>
+      <li class="team-member-card">
+        <div class="social-buttons">
+          <button
+            class="social-media-button"
+            title="Connect with Matt on LinkedIn"
+            matToolTip="Connect with Matt on LinkedIn"
+          >
+            <a href="https://www.linkedin.com/in/mthiggins1s/" target="_blank"
+              ><img src="/assets/linkedin-logo.png" height="40rem"
+            /></a>
+          </button>
+          <button
+            class="social-media-button"
+            title="See Matt's work on GitHub"
+            matToolTip="See Matt's work on GitHub"
+          >
+            <a href="https://github.com/mthiggins1s" target="_blank"
+              ><img src="/assets/github-logo.png" height="40rem"
+            /></a>
+          </button>
+        </div>
+        <img
+          title="Matt Higgins"
+          matTooltip="Matt Higgins"
+          class="profile-picture"
+          src="/assets/matt.jpeg"
+          alt="Matthew Higgins"
+          height="50px"
+        />
+        <div class="team-member-info">
+          <h3 class="profile-name">Matt Higgins</h3>
+          <h4 class="profile-occupation">Junior Front-End Developer</h4>
+          <p class="profile-description">
+            Experienced Drone Pilot, Tech Enthusiast, Proficient in Microsoft
+            Office & Adobe Suite, Passionate about leveraging digital tools for
+            creative solutions and impactful results. Let's connect and
+            collaborate!
+          </p>
+        </div>
+      </li>
+      <li class="team-member-card">
+        <div class="social-buttons">
+          <button
+            class="social-media-button"
+            title="Connect with Tanner on LinkedIn"
+            matToolTip="Connect with Tanner on LinkedIn"
+          >
+            <a href="https://www.linkedin.com/" target="_blank"
+              ><img src="/assets/linkedin-logo.png" height="40rem"
+            /></a>
+          </button>
+          <button
+            class="social-media-button"
+            title="See Tanner's work on GitHub"
+            matToolTip="See Tanner's work on GitHub"
+          >
+            <a href="https://github.com/TannerB2005" target="_blank"
+              ><img src="/assets/github-logo.png" height="40rem"
+            /></a>
+          </button>
+        </div>
+        <img
+          title="Tanner Bailey"
+          matTooltip="Tanner Bailey"
+          class="profile-picture"
+          src="/assets/tanner.jpg"
+          alt="Tanner"
+          height="50px"
+        />
+        <div class="team-member-info">
+          <h3 class="profile-name">Tanner Bailey</h3>
+          <h4 class="profile-occupation">Junior Full-Stack Developer</h4>
+          <p class="profile-description">
+            Tanner Bailey is a Junior Web Developer attending the Career &
+            Technology Center but is also enrolled into the CodeLabs Full Stack
+            Development both in Cape Girardeau. He has heavily worked with:
+            HTML5, CSS3, Javascript, and Markdown. His goal is to dedicate
+            himself to continuous growth and work in order to achieve success
+            with a reputable company. He also hopes to own and train a Golden
+            Retriever one day.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

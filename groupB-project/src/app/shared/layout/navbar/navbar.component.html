@@ -1,0 +1,81 @@
+<nav class="vertical-navbar">
+  <div class="navbar-top">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-icons">
+    <!-- 🏠 Home -->
+    <li title="Home" matTooltip="Home">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        style="color: inherit; text-decoration: none"
+      >
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+
+    <!-- 🔍 Search -->
+    <li title="Search" matTooltip="Search">
+      <button mat-button (click)="openDialog(SearchComponent)">
+        <i class="fas fa-search"></i>
+      </button>
+    </li>
+
+    <!-- ❤️ Favorites -->
+    <li title="Favorites" matTooltip="Favorites">
+      <a
+        routerLink="/favorites"
+        routerLinkActive="active"
+        style="color: inherit; text-decoration: none"
+      >
+        <i class="fas fa-heart"></i>
+      </a>
+    </li>
+
+    <!-- ⭐ Results -->
+    <li title="Results" matTooltip="Results">
+      <a
+        routerLink="/results"
+        routerLinkActive="active"
+        style="color: inherit; text-decoration: none"
+      >
+        <i class="fas fa-star"></i>
+      </a>
+    </li>
+
+    <!-- 🕒 Recently Viewed -->
+    <li title="Recently Viewed" matTooltip="Recently Viewed">
+      <a
+        routerLink="/recently-viewed"
+        routerLinkActive="active"
+        style="color: inherit; text-decoration: none"
+      >
+        <i class="fas fa-clock"></i>
+      </a>
+    </li>
+
+    <!-- 🔐 Login -->
+    <!-- <li>
+      <button mat-button (click)="signIn()">
+        <i class="fas fa-lock"></i>
+      </button>
+    </li> -->
+
+    <li title="Login" matTooltip="Login">
+      <button mat-button (click)="openDialog(LoginComponent)">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+    </li>
+  </ul>
+
+  <div title="Contact Us" matTooltip="Contact Us" class="navbar-bottom">
+    <a
+      routerLink="/contact"
+      routerLinkActive="active"
+      style="color: inherit; text-decoration: none"
+    >
+      <i class="fas fa-address-book"></i>
+    </a>
+  </div>
+</nav>

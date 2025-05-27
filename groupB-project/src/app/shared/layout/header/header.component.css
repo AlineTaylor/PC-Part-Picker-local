@@ -1,0 +1,45 @@
+.app-header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 4px solid var(--secondary-color-dark);
+}
+
+.home-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--secondary-color-light);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.center h1 {
+  margin: 0;
+  padding-left: 7.3rem; /* ⬅️ Shift title to the right */
+  color: var(--secondary-color-light);
+  font-size: 1.5rem;
+}
+
+
+.icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: var(--primary-color-dark);
+  cursor: pointer;
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 1px 6px var(--shadow-color-medium);
+}
+
+button:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}

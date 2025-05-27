@@ -1,0 +1,49 @@
+<ul class="item-list">
+  @for (item of items(); track item.key) {
+  <li class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <img class="card" [src]="item.imageUrl" [alt]="item.name" />
+      <p class="card-text">
+        <strong>Manufacturer:</strong> {{ item.manufacturer }}<br />
+        <strong>Price:</strong> ${{ item.price }}
+      </p>
+      <div class="card-footer">
+        <p class="card-text small">
+          <strong>Type:</strong> {{ item.type }}<br />
+        </p>
+
+        <div class="card-buttons">
+          <button
+            title="Check Amazon"
+            matTooltip=" Check Amazon"
+            class="amazon-button"
+            (click)="onAmazonClick(item)"
+          >
+            <a [href]="item.amazonURL" target="_blank"
+              ><img src="/assets/amazon-logo.png" width="40rem"
+            /></a>
+          </button>
+          <button
+            title="Favorite"
+            matTooltip="Favorite"
+            class="favorite-button"
+            [ngClass]="{ active: isFavorited(item) }"
+            (click)="toggleFavorite(item)"
+          >
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </li>
+  } @empty{
+  <li class="card empty-card">
+    <h5>No parts found!</h5>
+    <img
+      src="https://static.vecteezy.com/system/resources/previews/007/746/386/non_2x/still-empty-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg"
+      alt="No Parts Found"
+    />
+  </li>
+  }
+</ul>
