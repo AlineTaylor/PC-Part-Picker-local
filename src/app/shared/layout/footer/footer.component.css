@@ -1,0 +1,8 @@
+.app-footer {
+  background-color: var(--primary-color);
+  color: var(--text-color-white);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+}

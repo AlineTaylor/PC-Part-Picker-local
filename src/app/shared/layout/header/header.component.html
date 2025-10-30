@@ -1,0 +1,40 @@
+<header class="app-header">
+  <div class="left">
+    <button title="Home" class="home-btn" routerLink="/">🏠 Home</button>
+  </div>
+
+  <div class="center">
+    <h1>PC Part Finder</h1>
+  </div>
+
+  <div class="right">
+    <button
+      title="Search"
+      matTooltip="Search"
+      class="icon"
+      mat-button
+      (click)="openDialog(SearchComponent)"
+    >
+      🔍
+    </button>
+
+    <!-- 🔐 Show Sign In or 🚪 Sign Out -->
+    <button
+      *ngIf="!authService.isLoggedIn(); else logoutButton"
+      class="icon"
+      mat-button
+      (click)="signInWithGoogle()"
+      title="Login"
+      matTooltip="Login"
+    >
+   <!--(click)="openDialog(LoginComponent)"-->
+      🔐
+    </button>
+
+    <ng-template #logoutButton>
+      <button class="icon" mat-button (click)="logout()">
+        🚪
+      </button>
+    </ng-template>
+  </div>
+</header>

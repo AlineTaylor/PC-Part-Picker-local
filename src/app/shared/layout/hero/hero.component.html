@@ -1,0 +1,18 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      <span [class.fade]="isFading">{{ currentEmoji }}</span> Find the Perfect
+      PC Parts
+    </h1>
+    <p>Quickly search and compare the best components for your build!</p>
+    <button
+      title="Get Started"
+      matTooltip="Get Started"
+      class="hero-button"
+      mat-button
+      (click)="openDialog(SearchComponent)"
+    >
+      Get Started
+    </button>
+  </div>
+</section>

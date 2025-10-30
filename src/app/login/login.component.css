@@ -1,0 +1,38 @@
+.login-dialog {
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: var(--secondary-color-light);
+  color: var(--text-color-dark);
+  --mat-sys-on-surface: var(--text-color-dark);
+  --mat-sys-on-surface-variant: var(--text-color-light);
+  --mat-sys-headline-small-size: 1.5rem;
+  --mat-sys-headline-small-weight: 500;
+  --mat-sys-body-medium-size: 1rem;
+}
+input,
+select {
+  outline: none;
+  color: var(--text-color-dark);
+  padding: 8px;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color-light);
+  border-radius: 6px;
+  background-color: var(--input-background-color);
+  transition: all 0.2s ease-in-out;
+}
+input:focus,
+select :focus,
+select :active {
+  border: 1.5px solid var(--border-color-light);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--shadow-color-focus);
+  transition: all 0.2s ease-in-out;
+}
+button {
+  font-weight: 600;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-color-dark);
+}

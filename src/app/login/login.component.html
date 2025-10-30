@@ -1,0 +1,32 @@
+<section class="login-dialog">
+  <h2 mat-dialog-title>Log In</h2>
+
+  <mat-dialog-content>
+    <form>
+      <label for="username">Username </label>
+      <input name="username" type="text" placeholder="Username" required />
+      <br /><br />
+      <label for="password">Password </label>
+      <input name="password" type="password" placeholder="Password" required />
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <!-- Log In with Username/Password -->
+    <button mat-button mat-dialog-close>Log In</button>
+
+    <!-- Sign Up Button -->
+    <button mat-button mat-dialog-close>Sign Up</button>
+
+    <!-- Google Sign In -->
+    <button mat-button (click)="signInWithGoogle()">
+      <img
+        src="https://developers.google.com/identity/images/g-logo.png"
+        alt="Google logo"
+        width="20"
+        style="vertical-align: middle; margin-right: 8px"
+      />
+      Sign in with Google
+    </button>
+  </mat-dialog-actions>
+</section>

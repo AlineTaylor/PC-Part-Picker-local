@@ -1,0 +1,90 @@
+.vertical-navbar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  background-color: var(--background-color-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px var(--shadow-color-medium);
+  z-index: 10;
+  padding-top: 60px; /* push content below the header height */
+  padding-bottom: 40px; /* leave room above the footer */
+}
+
+/* Top icon (hamburger) */
+.navbar-top {
+  font-size: 24px;
+  color: var(--text-color-darkest);
+  cursor: pointer;
+  margin: 20px 0;
+  width: auto;
+  padding: 0; /* Remove any inherited padding */
+  text-align: center;
+}
+
+/* Icons */
+.nav-icons {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icons li {
+  width: 100%;
+  padding: 20px 0;
+  font-size: 20px;
+  color: var(--text-color-darkest);
+  cursor: pointer;
+  border-top: 1px solid var(--border-color-light);
+  border-bottom: 1px solid var(--border-color-light);
+  text-align: center;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-icons li:hover {
+  background-color: var(--background-color);
+  transform: scale(1.1);
+}
+
+/* ✅ Force all Font Awesome icons inside navbar to be black */
+.vertical-navbar i.fas {
+  color: black !important;
+}
+
+.vertical-navbar i.fas:hover {
+  color: black !important; /* keep them black on hover */
+}
+
+/* Bottom icon (lock or logout) */
+.navbar-bottom {
+  margin-top: auto;
+  padding: 0;
+  font-size: 20px;
+  color: var(--text-color-darkest);
+  cursor: pointer;
+  width: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.navbar-bottom:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  height: 28px;
+  width: 60px;
+  padding: 1em;
+  margin: -1em;
+}
