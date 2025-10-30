@@ -6,12 +6,9 @@ import { LoginComponent } from '../login.component';
 
 export const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'results', component: ResultsComponent },
-  { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
 
   // implementing lazy loading to routes
-
   {
     path: 'results',
     // component: ResultsComponent,
@@ -44,4 +41,6 @@ export const routes: Routes = [
         (mod) => mod.FavoritesComponent
       ),
   },
+  // Wildcard route for deployment troubleshooting
+  { path: '**', redirectTo: '' },
 ];
