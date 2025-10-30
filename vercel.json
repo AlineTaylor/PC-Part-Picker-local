@@ -1,5 +1,3 @@
 {
-  "buildCommand": "cd groupB-project && npm install && npm run build",
-  "outputDirectory": "groupB-project/dist/group-b-project",
-  "installCommand": "cd groupB-project && npm install"
+  "outputDirectory": "dist/group-b-project"
 }
